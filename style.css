@@ -305,7 +305,7 @@ h2.packages-heading {
     /* box-shadow: -15px -15px 15px rgba(130, 130, 130, 0.8),
                  15px 15px 15px rgba(0, 0, 0, 0.5); */
     box-shadow: -10px -10px 8px rgb(0, 0, 0) inset,
-    -4px -4px 10px rgba(0, 0, 9, 0.701);             
+    -4px -4px 10px rgba(0, 0, 9, 0.701);    
 }
 
 .border-card {
@@ -337,6 +337,22 @@ h3.treatment-card-text {
     color: #fff;
 }
 
+.treatment-card:hover.treatment-card img {
+    transform: translate(0, -5%);
+    transition: all 0.5s linear;
+}
+
+.treatment-card:hover.treatment-card h3 {
+    transform: translate(0, -10%);
+    transition: all 0.5s linear;
+}
+
+.treatment-card:hover.treatment-card a {
+    opacity: 1;
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+
 .treatment-card a {
     font-family: 'Nunito', sans-serif;
     font-size: 1.6rem;
@@ -345,8 +361,10 @@ h3.treatment-card-text {
     background: #16a082;
     padding: 0.4em 2em;
     border-radius: 6px;
-    margin-top: 0.5em;
+    margin-top: 0.2em;    
+    margin-bottom: 0.2em;    
     display: none;
+    opacity: 0;
 }
 
 /* ==============================================
@@ -354,12 +372,91 @@ h3.treatment-card-text {
 ==============================================     */
 
 #about {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     margin-top: 6rem;
 }
 
 .about-container {
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    position: relative;
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.about-container img {
+    position: absolute;
+    transform: translate(30%, 0);
+    /* left: 20%; */
+    width: 47%;
+    height: 0;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.about-container:hover img {
+    opacity: 1;
+    transform: translate(0, 0);
+    position: static;
+    transition: all 0.5s ease-in-out;
+    height: auto;
+}
+
+.about-container:hover.about-container {
+    justify-content: space-between;
+    /* align-items: flex-start; */
+}
+
+.about-container:hover .about-text {
+    width: 50%;
+    justify-content: flex-start;
+    transition: all 0.5s ease-in-out;
+}
+
+.about-container:hover .about-text p {
+    text-align: justify;
+}
+
+.about-text {
+    /* border: 2px solid salmon; */
+    /* position: absolute; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    transition: width 0.5s ease-in-out;
+}
+
+.about-text h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-align: center;
+    /* background-color: #64b741; */
+    background-color: #004225;
+    /* background-color: #10300d; */
+    padding: 0.6em 0.2em;
+    color: white;
+    border-radius: 4px;
+}
+
+.about-text p {
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.65rem;
+    font-weight: 500;
+    /* letter-spacing: 0.4px; */
+    text-align: center;
+    /* background-color: #64b741; */
+    /* background-color: #004225; */
+    /* background-color: #10300d; */
+    /* padding: 0.6em 0.2em; */
+    color: #000;
+    /* border-radius: 4px; */
+    margin-top: 1.5em;
+    padding: 0 1em;
 }
 
 /* ==============================================
