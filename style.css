@@ -35,6 +35,8 @@ main {
     background-attachment: fixed;
     min-height: 400vh;
     max-width: 100%;
+    background-position: center top;
+    
     background-size: cover;
 }
 div.overlay {
@@ -132,6 +134,20 @@ li.navbar-menu-list:hover::after  {
 }
 
 /* ==============================================
+                 Header Section
+==============================================     */
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header img {
+    width: 50%;
+} 
+
+/* ==============================================
                  Package Section
 ==============================================     */
 
@@ -146,12 +162,31 @@ li.navbar-menu-list:hover::after  {
     flex-direction: column;
 }
 
+.packages-container p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-align: center;
+    /* background-color: #64b741; */
+    /* background-color: #12372A; */
+    /* background-color: #163020; */
+    /* background-color: #65b741; */
+    /* background-color: #005B41; */
+    background-color: #004225;
+    /* background-color: #10300d; */
+    padding: 0.6em 0.2em;
+    color: white;
+    border-radius: 4px;
+}
+
 .packages-card-container {
     /* border: 2px solid brown; */
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin-top: 7em;
     
 }
 
@@ -161,6 +196,10 @@ h2.packages-heading {
     text-align: center;
     margin-bottom: 1em;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
+}
+
+.packages-container h2 {
+    margin-bottom: 0.5em;
 }
 
 .package-card {
@@ -374,6 +413,7 @@ h3.treatment-card-text {
 #about {
     /* border: 2px solid green; */
     margin-top: 6rem;
+    background-color: #89898960;
 }
 
 .about-container {
@@ -411,7 +451,8 @@ h3.treatment-card-text {
 .about-container:hover .about-text {
     width: 50%;
     justify-content: flex-start;
-    transition: all 0.5s ease-in-out;
+    margin-top: 1.5em;
+    transition: width 0.5s ease-in-out;
 }
 
 .about-container:hover .about-text p {
