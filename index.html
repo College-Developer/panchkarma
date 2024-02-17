@@ -6,7 +6,8 @@
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'>
     <link rel="stylesheet" href="style.css">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js' defer></script>
-    <script  src="./script.js" defer></script>
+    
+    <script src="./script.js" defer></script>
     <title>Panchkarma</title>
 </head>
 <body>
@@ -15,33 +16,70 @@
             <img src="./PANCHAKARMA.png" alt="" class="logo">
             <ul class="navbar-menu">
                 <li class="navbar-menu-list"><a href="">Home</a></li>
-                
                 <li class="navbar-menu-list"><a href="">About</a></li>
                 <li class="navbar-menu-list dropdown"><a href="">Services</a>
-                    <!-- <ul>
-                        <li><a href="">Doctor Consultation</a></li>
-                        <li><a href="">Heal Your Problem</a></li>
-                        <li><a href="">Rejuvenation Therapies</a></li>
-                        <li><a href="">Beauty Therapies</a></li>
-                        <li><a href="">Special Packages<a></li>
-                        <li><a href="">Seasonal Packages</a></li>
-                    </ul> -->
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-menu-list"><a href="">Doctor Consultation</a></li>
+                        <li class="dropdown-menu-list"><a href="">Heal Your Problem</a></li>
+                        <li class="dropdown-menu-list"><a href="">Rejuvenation Therapies</a></li>
+                        <li class="dropdown-menu-list"><a href="">Beauty Therapies</a></li>
+                        <li class="dropdown-menu-list"><a href="">Special Packages</a></li>
+                        <li class="dropdown-menu-list"><a href="">Seasonal Packages</a></li>
+                    </ul>
                 </li>
                 <li class="navbar-menu-list dropdown"><a href="">Ayurveda</a>
-                    <!-- <ul>
-                        <li><a href="">Basic Principles</a></li>
-                        <li><a href="">Ayurvedic Methodology</a></li>
-                        <li><a href="">Anuvasana Therapy</a></li>
-                        <li><a href="">Basti Therapy</a></li>
-                        <li><a href="">Nasyam Therapy</a></li>
-                        <li><a href="">Vamanam Therapy</a></li>
-                        <li><a href="">Virechana Therapy</a></li>
-                    </ul> -->
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-menu-list"><a href="">Basic Principles</a></li>
+                        <li class="dropdown-menu-list"><a href="">Ayurvedic Methodology</a></li>
+                        <li class="dropdown-menu-list"><a href="">Anuvasana Therapy</a></li>
+                        <li class="dropdown-menu-list"><a href="">Basti Therapy</a></li>
+                        <li class="dropdown-menu-list"><a href="">Nasyam Therapy</a></li>
+                        <li class="dropdown-menu-list"><a href="">Vamanam Therapy</a></li>
+                        <li class="dropdown-menu-list"><a href="">Virechana Therapy</a></li>
+                    </ul>
                 </li>
                 <li class="navbar-menu-list"><a href="">Gallery</a></li>
                 <li class="navbar-menu-list"><a href="">Treatment</a></li>
                 <li class="navbar-menu-list"><a href="">Contact Us</a></li>
             </ul>
+            <div class="mobile-menu">
+                <span class="menu-icon" style="font-size: 3rem; color: white;">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+
+                <span class="close-icon hidden" style="font-size: 3rem; color: white;">
+                    <i class="fa-solid fa-xmark"></i>
+                </span>
+
+                <ul class="navbar-menu-mob">
+                    <li class="navbar-menu-mob-list"><a href="">Home</a></li>
+                    <li class="navbar-menu-mob-list"><a href="">About</a></li>
+                    <li class="navbar-menu-mob-list dropdown"><a href="">Services</a>
+                        <ul class="dropdown-menu-mob">
+                            <li class="dropdown-menu-mob-list"><a href="">Doctor Consultation</a></li>
+                            <li class="dropdown-menu-mob-list"><a href="">Heal Your Problem</a></li>
+                            <li class="dropdown-menu-mob-list"><a href="">Rejuvenation Therapies</a></li>
+                            <li class="dropdown-menu-mob-list"><a href="">Beauty Therapies</a></li>
+                            <li class="dropdown-menu-mob-list"><a href="">Special Packages</a></li>
+                            <li class="dropdown-menu-mob-list"><a href="">Seasonal Packages</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-menu-mob-list dropdown"><a href="">Ayurveda</a>
+                        <ul class="dropdown-menu-mob">
+                            <li class="dropdown-menu-mob-list"><a href="">Basic Principles</a></li>
+                            <li class="dropdown-menu-mob-list"><a href="">Ayurvedic Methodology</a></li>
+                            <li class="dropdown-menu-mob-list"><a href="">Anuvasana Therapy</a></li>
+                            <li class="dropdown-menu-mob-list"><a href="">Basti Therapy</a></li>
+                            <li class="dropdown-menu-mob-list"><a href="">Nasyam Therapy</a></li>
+                            <li class="dropdown-menu-mob-list"><a href="">Vamanam Therapy</a></li>
+                            <li class="dropdown-menu-mob-list"><a href="">Virechana Therapy</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-menu-mob-list"><a href="">Gallery</a></li>
+                    <li class="navbar-menu-mob-list"><a href="">Treatment</a></li>
+                    <li class="navbar-menu-mob-list"><a href="">Contact Us</a></li>
+                </ul>
+            </div>
         </nav>
         <header style="height: 100vh; border: 2px solid green;">
             <!-- <img src="./web-slider-3.jpg" alt=""> -->
@@ -53,10 +91,8 @@
                 <p>Panchkarma Bliss: Discover Our Best Therapy Packages</p>
                 <div class="packages-card-container">
                     <div class="package-card">
-                        <!-- <img src="./attractive-african-woman-enjoying-face-massage-spa-salon.jpg" alt=""> -->
                         <video controls loop autoplay>
                             <source src="video.mp4" type="video/mp4">
-                            <!-- <source src="movie.ogg" type="video/ogg"> -->
                             Your browser does not support the video tag.
                         </video>
                         <div class="clip-overlay">
@@ -67,10 +103,8 @@
                         </div>
                     </div>
                     <div class="package-card">
-                        <!-- <img src="./attractive-african-woman-enjoying-face-massage-spa-salon.jpg" alt=""> -->
                         <video controls loop autoplay>
                             <source src="video.mp4" type="video/mp4">
-                            <!-- <source src="movie.ogg" type="video/ogg"> -->
                             Your browser does not support the video tag.
                         </video>
                         <div class="clip-overlay">
@@ -81,10 +115,8 @@
                         </div>
                     </div>
                     <div class="package-card">
-                        <!-- <img src="./attractive-african-woman-enjoying-face-massage-spa-salon.jpg" alt=""> -->
                         <video controls loop autoplay>
                             <source src="video.mp4" type="video/mp4">
-                            <!-- <source src="movie.ogg" type="video/ogg"> -->
                             Your browser does not support the video tag.
                         </video>
                         <div class="clip-overlay">
@@ -234,7 +266,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
             </div>
         </section>
@@ -269,5 +300,6 @@
 
     </main>
     <div class="overlay"></div>
+    <script src="https://kit.fontawesome.com/bb7995b690.js" crossorigin="anonymous" defer></script>
 </body>
 </html>
