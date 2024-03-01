@@ -54,7 +54,7 @@
                 <ul class="navbar-menu-mob">
                     <li class="navbar-menu-mob-list"><a href="">Home</a></li>
                     <li class="navbar-menu-mob-list"><a href="">About</a></li>
-                    <li class="navbar-menu-mob-list dropdown"><a href="">Services</a>
+                    <li class="navbar-menu-mob-list dropdown-mob"><a href="">Services</a>
                         <ul class="dropdown-menu-mob">
                             <li class="dropdown-menu-mob-list"><a href="">Doctor Consultation</a></li>
                             <li class="dropdown-menu-mob-list"><a href="">Heal Your Problem</a></li>
@@ -64,7 +64,7 @@
                             <li class="dropdown-menu-mob-list"><a href="">Seasonal Packages</a></li>
                         </ul>
                     </li>
-                    <li class="navbar-menu-mob-list dropdown"><a href="">Ayurveda</a>
+                    <li class="navbar-menu-mob-list dropdown-mob"><a href="">Ayurveda</a>
                         <ul class="dropdown-menu-mob">
                             <li class="dropdown-menu-mob-list"><a href="">Basic Principles</a></li>
                             <li class="dropdown-menu-mob-list"><a href="">Ayurvedic Methodology</a></li>
@@ -81,8 +81,43 @@
                 </ul>
             </div>
         </nav>
-        <header style="height: 100vh; border: 2px solid green;">
-            <!-- <img src="./web-slider-3.jpg" alt=""> -->
+        <header>
+            <div class="slider-container section-margin">
+                <div class="slider-wrapper">
+                    <div class="slide-item first">
+                        <div class="text-wrapper">
+                            <h1>MAKE AYURVEDA YOUR FIRST CHOICE</h1>
+                            <h3>NOT YOUR LAST RESORT</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, illo. Dicta error saepe eius, recusandae, vitae cumque distinctio officia maiores quos doloribus quidem voluptate alias, eveniet sapiente ipsam praesentium quisquam.</p>
+                        </div>
+                        <img src="./web5.jpg" alt="">
+                        <div class="opacity-layer"></div>
+                    </div>
+                    <div class="slide-item third">
+                        <div class="text-wrapper">
+                            <h1>MAKE AYURVEDA YOUR FIRST CHOICE</h1>
+                            <h3>NOT YOUR LAST RESORT</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, illo. Dicta error saepe eius, recusandae, vitae cumque distinctio officia maiores quos doloribus quidem voluptate alias, eveniet sapiente ipsam praesentium quisquam.</p>
+                        </div>
+                        <img class="even" src="./web8.jpg" alt="">
+                        <div class="opacity-layer"></div>
+                    </div>
+                    <div class="slide-item second">
+                        <div class="text-wrapper">
+                            <h1>MAKE AYURVEDA YOUR FIRST CHOICE</h1>
+                            <h3>NOT YOUR LAST RESORT</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, illo. Dicta error saepe eius, recusandae, vitae cumque distinctio officia maiores quos doloribus quidem voluptate alias, eveniet sapiente ipsam praesentium quisquam.</p>
+                        </div>
+                        <img src="./web7.jpg" alt="">
+                        <div class="opacity-layer"></div>
+                    </div>
+                </div>
+                <div class="circular-disc">
+                    <span onclick="slideValue(0)" class="active"></span>
+                    <span onclick="slideValue(1)"></span>
+                    <span onclick="slideValue(2)"></span>
+                </div>
+            </div>
         </header>
 
         <section id="packages" class="section-padding">
@@ -91,7 +126,7 @@
                 <p>Panchkarma Bliss: Discover Our Best Therapy Packages</p>
                 <div class="packages-card-container">
                     <div class="package-card">
-                        <video controls loop autoplay>
+                        <video autoplay loop controls muted>
                             <source src="video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -103,7 +138,7 @@
                         </div>
                     </div>
                     <div class="package-card">
-                        <video controls loop autoplay>
+                        <video autoplay loop controls muted>
                             <source src="video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -115,7 +150,7 @@
                         </div>
                     </div>
                     <div class="package-card">
-                        <video controls loop autoplay>
+                        <video autoplay loop controls muted>
                             <source src="video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -299,7 +334,7 @@
         </section>
 
     </main>
-    <div class="overlay"></div>
+    <!-- <div class="overlay"></div> -->
     <script src="https://kit.fontawesome.com/bb7995b690.js" crossorigin="anonymous" defer></script>
 </body>
 </html>
