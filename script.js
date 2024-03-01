@@ -1,6 +1,12 @@
 const menuToggleBtns = document.querySelectorAll(".mobile-menu span");
 const mobileMenu = document.querySelector("ul.navbar-menu-mob");
-console.log(menuToggleBtns);
+const firstSlide = document.querySelector(".first");
+const secondSlide = document.querySelector(".second");
+const thirdSlide = document.querySelector(".third");
+const slides = [firstSlide, thirdSlide, secondSlide];
+const circularDiscs = document.querySelectorAll(".circular-disc span");
+console.log(circularDiscs);
+
 
 menuToggleBtns.forEach((menuToggleBtn) => {
   menuToggleBtn.addEventListener("click", () => {
@@ -8,7 +14,6 @@ menuToggleBtns.forEach((menuToggleBtn) => {
     menuToggleBtns[1].classList.toggle("hidden");
     console.log(menuToggleBtns[0].classList.contains("hidden"));
     if(menuToggleBtns[0].classList.contains("hidden")){
-      // mobileMenu.style.display = "block";
       mobileMenu.style.transform = "translateX(0)";
     }
     else {
@@ -18,6 +23,30 @@ menuToggleBtns.forEach((menuToggleBtn) => {
 });
 
 
+
+let counter = 0;
+
+slides.forEach((slide, index) => {
+  slide.style.left = `${index * 100}%`;
+});
+
+function slideMove() {
+  slides.forEach((slide) => {
+    slide.style.transform = `translateX(-${counter * 100}%)`;
+  });
+}
+
+function slideValue(val) {
+  counter = val;
+  circularDiscs.forEach((disc) => {
+    disc.classList.remove("active");
+  })
+  circularDiscs[val].classList.add("active");
+  slideMove();
+}
+
+
+slideMove();
 
 
 var swiper = new Swiper(".swiper", {
