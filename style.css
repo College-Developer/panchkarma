@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&family=Nunito:wght@300;400;500;600;700&family=PT+Serif:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap");
 
 *,
 *::before,
@@ -15,6 +16,15 @@ font-family: 'PT Serif', serif; */
     --mainHeading: ;
     --subHeading: ;
     --infoText: ;
+    /* Colors */
+  --brand-color: hsl(46, 100%, 50%);
+  /* --brand-color: #65B741; */
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  /* Fonts */
+  --font-title: "Montserrat", sans-serif;
+  --font-text: "Lato", sans-serif;
+    
 }
 
 html {
@@ -34,7 +44,7 @@ body {
 main {
     background: url("./wood-2142241_1920.jpg");
     background-attachment: fixed;
-    min-height: 600vh;
+    min-height: 2000vh;
     max-width: 100%;
     width: 100%;
     background-position: center top;
@@ -1076,6 +1086,286 @@ h3.treatment-card-text {
     padding: 0 1em;
 }
 
+/* ==============================================
+                 Therapy Section
+==============================================     */  
+
+.therapy-text h2 {
+    margin-bottom: 0.5em;
+}
+
+.therapy-text p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-align: center;
+    background-color: #64b741;
+    /* background-color: #12372A; */
+    /* background-color: #163020; */
+    /* background-color: #65b741; */
+    /* background-color: #005B41; */
+    background-color: #004225;
+    /* background-color: #10300d; */
+    padding: 0.6em 0.2em;
+    color: white;
+    border-radius: 4px;
+}
+
+.card {
+    display: grid;
+    place-items: center;
+    /* width: 80vw; */
+    /* max-width: 21.875rem; */
+    max-width: 100%;
+    height: 45rem;
+    /* height: 100%; */
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.4rem 0.8rem rgba(0, 0, 0, 0.25);
+}
+  
+.card > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+  
+.card__background {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    object-position: center;
+}
+  
+.card__content {
+    --flow-space: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-end;
+    height: 60%;
+    padding: 12% 2rem 3rem;
+    background: linear-gradient(
+      180deg,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(0, 0%, 0%, 0.3) 10%,
+      hsl(0, 0%, 0%) 100%
+    );
+}
+  
+.card__content--container {
+    --flow-space: 2rem;
+}
+  
+.card__title {
+    font-size: 3.6rem;
+    font-family: var(--font-title);
+    color: var(--white);
+    line-height: 1.1;
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+}
+  
+.card__title::after {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    width: calc(100% + 2rem);
+    bottom: calc((2rem - 0.8rem) * -1);
+    left: -2rem;
+    background-color: var(--brand-color);
+}
+
+.card__description {
+    font-family: var(--font-text);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--white);
+    color: white;
+    margin: 1em 0;
+}
+  
+.card__button {
+    padding: 0.75em 1.6em;
+    width: fit-content;
+    width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+    font-variant: small-caps;
+    font-weight: bold;
+    border-radius: 0.45em;
+    border: none;
+    background-color: var(--brand-color);
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    color: var(--black);
+}
+  
+.card__button:focus {
+    outline: 2px solid black;
+    outline-offset: -5px;
+}
+  
+@media (any-hover: hover) and (any-pointer: fine) {
+    .card__content {
+      transform: translateY(62%);
+      transition: transform 500ms ease-out;
+      transition-delay: 500ms;
+    }
+  
+    .card__title::after {
+      opacity: 0;
+      transform: scaleX(0);
+      transition: opacity 1000ms ease-in, transform 500ms ease-out;
+      transition-delay: 500ms;
+      transform-origin: right;
+    }
+  
+    .card__background {
+      transition: transform 500ms ease-in;
+    }
+  
+    .card__content--container > :not(.card__title),
+    .card__button {
+      opacity: 0;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+  
+    .card:hover,
+    .card:focus-within {
+      transform: scale(1.05);
+      transition: transform 500ms ease-in;
+    }
+  
+    .card:hover .card__content,
+    .card:focus-within .card__content {
+      transform: translateY(0);
+      transition: transform 500ms ease-in;
+    }
+  
+    .card:focus-within .card__content {
+      transition-duration: 0ms;
+    }
+  
+    .card:hover .card__background,
+    .card:focus-within .card__background {
+      transform: scale(1.3);
+    }
+  
+    .card:hover .card__content--container > :not(.card__title),
+    .card:hover .card__button,
+    .card:focus-within .card__content--container > :not(.card__title),
+    .card:focus-within .card__button {
+      opacity: 1;
+      transition: opacity 500ms ease-in;
+      transition-delay: 1000ms;
+    }
+  
+    .card:hover .card__title::after,
+    .card:focus-within .card__title::after {
+      opacity: 1;
+      transform: scaleX(1);
+      transform-origin: left;
+      transition: opacity 500ms ease-in, transform 500ms ease-in;
+      transition-delay: 500ms;
+    }
+}
+  
+.therapy-wrapper {
+    /* border: 5px solid tomato; */
+    margin:  6rem auto 0;
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    padding: 0 22px;
+}
+  
+.therapy-wrapper span.nav-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    line-height: 50px;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    text-align: center;
+    cursor: pointer;
+}
+  
+.therapy-wrapper span.nav-btn:hover {
+    background: #161616;
+    color: #fff;
+    transition: all o.3s linear;
+}
+  
+.therapy-wrapper span:first-child {
+    left: -0px;
+    z-index: 1;
+}
+  
+.therapy-wrapper span:last-child {
+    right: -0px;
+}
+  
+.therapy-wrapper .therapy-carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow: hidden;
+    /* padding: 20px; */
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 0;
+}
+  
+.therapy-carousel.no-transition {
+    scroll-behavior: auto;
+}
+  
+.therapy-carousel::-webkit-scrollbar {
+    display: none;
+}
+  
+.therapy-carousel.dragging {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+  
+.therapy-carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+  
+.therapy-carousel .card {
+    scroll-snap-align: start;
+    list-style: none;
+    cursor: pointer;
+}
+  
+  
+@media screen and (max-width: 400px) {
+    .card__content {
+      height: 85%;
+      /* padding: 12% 1.25rem 1.875rem;  */
+      padding: 12% 2.96rem; 
+      justify-content: flex-end;
+    }
+  
+    .card__title {
+      font-size: 2.72rem;
+    }
+  
+    .card__button {
+      padding: 0.6em 1.4em;
+      font-size: 1.52rem;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .section-padding {
         padding: 0 2rem;
@@ -1125,6 +1415,21 @@ h3.treatment-card-text {
         min-height: 180px;
     }
 }
+
+@media screen and (max-width: 600px) {
+    div.therapy-wrapper .therapy-carousel {
+        grid-auto-columns: 100%;
+    }
+  
+    .therapy-carousel .card {
+        max-height: 600px;
+        height: 100%;
+    }
+  
+    .card__content {
+        justify-content: flex-start;
+    }
+} 
 
 @media screen and (max-width: 650px) {
     h2.packages-heading {
@@ -1183,6 +1488,12 @@ h3.treatment-card-text {
         padding: 2em 0;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .therapy-wrapper .therapy-carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+} 
 
 @media screen and (max-width: 930px) {
     ul.navbar-menu {
