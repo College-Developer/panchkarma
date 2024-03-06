@@ -42,9 +42,9 @@ body {
 }
 
 main {
-    background: url("./wood-2142241_1920.jpg");
+    background: url("./images/wood-2142241_1920.jpg");
     background-attachment: fixed;
-    min-height: 2000vh;
+    /* min-height: 2000vh; */
     max-width: 100%;
     width: 100%;
     background-position: center top;
@@ -1347,6 +1347,105 @@ h3.treatment-card-text {
     cursor: pointer;
 }
   
+
+/* ==============================================
+                 Therapy Section
+==============================================     */  
+
+#footer {
+    /* border: 3px solid black; */
+    background-color: #004225;
+    height: 60vh;
+}
+
+.footer-links-container {
+    height: 100%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    /* border: 3px solid tomato; */
+    flex: 1;
+    text-align: center;
+    margin-left: 1.5em;
+}
+
+.footer-links-heading {
+    font-family: 'PT Serif', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.service-links {
+    margin-top: 2em;
+    /* border: 2px solid pink; */
+}
+
+.service-links li {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 0.5em;
+}
+
+.footer-tagline {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 1em;
+}
+
+.social-links {
+    /* border: 2px solid gray; */
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.social-links li {
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.social-links li:first-child {
+    margin-left: 0;
+}
+
+.social-links li i {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 0.2em;
+}
+
+.contact-info {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 1em;
+    /* border: 2px solid black; */
+    text-align: left;
+    padding-left: 5.5em;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info i {
+    font-size: 2.5rem;
+    padding: 0.3em;
+}
+
+
   
 @media screen and (max-width: 400px) {
     .card__content {
